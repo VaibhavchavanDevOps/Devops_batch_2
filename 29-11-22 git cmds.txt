@@ -1,0 +1,173 @@
+git init --- initializes to git repo and creates a .git folder
+git status -- shows the status of current changes in the git folder
+git add --- adds the changes from wsp to staging area
+git rm --cached filename -- reverts changes from staging area to wsp
+git restore --staged filename -- modifiled files are reverted from sa to wsp
+git commit -m "comment" -- to commit file from SA to LR (default master branch)
+
+git config --global user.name username-- to configure username for git installation on machine
+git config --global user.email useremail-- to configure user email
+git config --list --- to check username and email
+git config --global --edit -----to edit username/useremail
+
+git remote -v ---- to check any remote origin
+git remote show origin --- to check any remote origin
+git remote add origin originurl -- configures RR url
+git remote rm origin -- removes origin url
+
+git push origin master -- LR to RR push the chnages which are committed
+
+git log -- shows all the commites in LR
+git log -1
+git log -2
+git log -3 --- shows latest 3 commits
+git log --oneline --- summerize all the commits
+git show commitID -- details of the commits will be shown
+
+git clone url -- downloads rr with history to local machine
+git pull origin master -- downloads latest change which is done in RR to LR
+
+
+1  git -v
+    2  clear
+    3  cd /mnt
+    4  mkdir vel-app
+    5  cd vel-app/
+    6  ls -ltra
+    7  git init
+    8  ls -ltra
+    9  vi index.html
+   10  ls -ltr
+   11  git status
+   12  vi index.html
+   13  ls -ltr
+   14  git add index.html
+   15  git status
+   16  git rm --cached index.html
+   17  git status
+   18  git add index.html
+   19  ls -ltr
+   20  git status
+   21  git commit -m "my 1st commit"
+   22  git log
+   23  git show 294ce7f10f
+   24  git status
+   25  git remote add origin https://github.com/Shantanumajan6/vel-app.git
+   26  git remote -v
+   27  git remote show origin
+   28  git remote rm origin
+   29  git remote -v
+   30  git remote add origin https://github.com/Shantanumajan6/vel-app.git
+   31  git remote -v
+   32  git push origin master
+   33  ls -ltr
+   34  vi index.html
+   35  git status
+   36  cat index.html
+   37  git restore index.html
+   38  cat index.html
+   39  git status
+   40  vi index.html
+   41  git status
+   42  cat index.html
+   43  git restore index.html
+   44  cat index.html
+   45  vi index.html
+   46  git add index.html
+   47  git status
+   48  git restore --staged index.html
+   49  git status
+   50  git add index.html
+   51  git status
+   52  git log
+   53  git config --global user.name shantanu
+   54  git config --global user.email shantanumahajan6@gmail.com
+   55  git config --list
+   56  git config --global --edit
+   57  git status
+   58  git commit -m "2nd change"
+   59  git log
+   60  git show 099d
+   61  clear
+   62  git log
+   63  git remote -v
+   64  git push origin master
+   65  ls -ltr
+   66  vi dev.html
+   67  vi qa.html
+   68  git status
+   69  vi index.html
+   70  git status
+   71  git add index.html dev.html
+   72  git status
+   73  git commit -m "added a dev.html file and updated index"
+   74  git log
+   75  git show 5b0277a61
+   76  git log
+   77  git push origin master
+   78  git status
+   79  git add qa.html
+   80  git commit -m "added a new qa file"
+   81  git log
+   82  git push origin master
+   83  git log
+   84  clear
+   85  git log
+   86  clear
+   87  git log -1
+   88  git log -2
+   89  git log
+   90  git log -1
+   91  git log -2
+   92  git log --online
+   93  git log --oneline
+   94  git log -3
+   95  git log -oneline
+   96  git log --oneline
+   97  clear
+   98  git log
+   99  ls -ltr
+  100  vi dev.html
+  101  vi index.html
+  102  git status
+  103  git add dev.html index.html
+  104  git status
+  105  git commit -m "updated"
+  106  git push origin master
+  107  git log
+  108  git pull origin master
+  109  git log
+  110  history
+  
+  22  git log
+   23  git pull origin master
+   24  cat dev.html
+   25  cat index.html
+   26  clear
+   27  git log
+   28  clear
+   29  vi dev2file
+   30  ls -ltr
+   31  vi index.html
+   32  git status
+   33  git config --global user.name mahesh
+   34  git config --global user.email mahesh@gmail.com
+   35  git config --list
+   36  ls -ltr
+   37  git status
+   38  git add *
+   39  git status
+   40  git commit -m "added 2 new changes from mahesh"
+   41  git remote -v
+   42  git push origin master
+   43  history
+   
+   2  cd /mnt
+    3  git -v
+    4  clear
+    5  ls -ltr
+    6  git clone https://github.com/Shantanumajan6/vel-app.git
+    7  ls -ltr
+    8  cd vel-app/
+    9  pwd
+   10  ls -ltr

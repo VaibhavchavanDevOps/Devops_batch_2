@@ -1,0 +1,169 @@
+** Train with Shubham **
+
+
+
+
+Self study ::
+
+
+Basic work of Devops enginner is to buid the code and deploy 
+
+
+
+Git and Githud ::
+
+- Code management
+- Version control system 
+- collabration 
+
+Docker :: 
+
+
+- Docker container --
+   It basically build on container for code so that the code can run and work on any system and OS.
+   We are creating a containers in Docker 
+   
+- Virtualization  
+- Code will build in Docker
+
+Jenkin ::
+
+Jenkin will help in creating a CI/CD pipeline 
+
+In CI/CD pipeline or with the help of CI/CD pipeline the we can automate the process of build , test and deploy .
+
+ -- The code will be build in Docker and then al test cases will be passed and the ode will be deploy on server .....this is the flow of automation .
+ 
+ -- We are writing the script in jenkin to automate the process 
+
+Kubernetes ::
+
+-- it is the tool used for container orchestration
+
+-- Kubernetes will manage the all the containers  
+
+
+Infra as Code ::
+
+-- It contains the two part : - 
+
+    1) - Provisiong = Terraform and cloudformation 
+	
+	2) - Configuration management = Ansible and Chef 
+	
+	We are writing the code to manage the configuration / System 
+	
+Grafana ::
+
+ -- It is the tool used for monitoring purpose 
+
+
+
+
+Linux Fundamentals :: 
+
+
+** Adj**
+- Open source 
+- Allow multi user to used and multitask with powerfull shell 
+- High seciurity 
+
+* The linux archi *
+
+Application >> Shell >> Kernel >> Hardware 
+
+Application can interact with hardware using Kernel and we can give command to kernel through shell.
+
+ 
+  
+ --/home -Every user will contain in /home
+ 
+ For user everything will be contain in cd /home/username
+ 
+ 
+for eg . cd /home/ubuntu
+
+- logs will be contain in cd /var/logs
+**Commands **
+
+= echo ___ - to print anything
+
+** While coping a file the current location is donated by sinle dot (.)
+
+** to create file like file1.txt , file2.txt , file3.txt .....upto file10.txt then use command = touch file{1..10}.txt
+
+
+** To add user in linux **
+
+= sudo useradd vaibhav_dev -m         ...(vaibhav_dev is username )
+
+>> to set a password for user = passwd vaibhav_dev
+
+ to set password==sudo passwd vaibhav_devops
+ 
+ >> to know how many and wheather user is added or not = sudo cat /etc/passwd
+ 
+ >> to add group = sudo groupadd devops
+ >> to check wheather group is present or not = sudo cat /etc/group
+ 
+ >> to add user in group = sudo gpasswd -a vaibhav_dev devops   { -a is for the adding the single user }
+ >> to add multiple user in a group = sudo gpasswd -M vaibhav_test,vaibhav_devops devops    { -M is use to adding a multiple user } 
+ 
+ what is sudo ?
+ 
+ it is the group which has given all permission as root user.
+ 
+ >> to change the permission for the file = sudo chmod 761 vaibhav_test   { 761 is the number ...for the permissions } 
+ 
+ >> to change the file permissions = sudo chmod 777 vaibhav_test     
+ 
+ >> to search anything use grep command = grep -r devops /home/ubuntu/  
+ 
+ >> Study awk command 
+ 
+ 
+ 
+ >> to get to know about services running in your machine = top
+ 
+ >> to get top services in your machine = top -b 
+ 
+  = systemctl >>> it is used to get know about status   ( systemctl will give the status of services which are running in background ) 
+  
+  = service >> it is used to get know about status 
+  
+  ** Shell scripting ** 
+  
+  Shell script always start with =#!/bin/bash or #!/bin/sh
+  
+  use echo to print anything 
+  
+  
+  >> to run script use  = bash script_name or ./script_name
+  
+  
+  
+  >>  Everytime first make a script and then give permission to the user to read ,write and execute .and then run .
+  
+  
+  >>  steps ::
+  
+               - make a directory and then folder 
+			   - then make a file with .sh extension
+			   - write script 
+			   - we an execute the script without giving permission via bash command.
+			   - or give permission to user with ./scipt_name
+			   - 
+			   
+			   
+   
+
+ >> = echo $shell   >> to know the current shell status
+ 
+ >> to print the variable name put $ before variable 
+ 
+ = uptime 
+ >> = who 
+ 
+ >> if condition
+ 
+ >> =df -h -- to know how much disk space is remaining 

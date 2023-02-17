@@ -1,0 +1,378 @@
+Docker Commands :::
+
+yum install docker -y
+yum remove docker -y
+systemctl start docker
+systemctl stop docker
+systemctl restart docker
+systemctl status docker
+
+docker -v
+docker pull imagename --- downloads the image from docker registry
+(default docker registry -- dockerhub , if you want to download from custom regitry use docker login custom_resitry_url)
+
+docker images
+docker image ls --- list the images 
+
+docker rmi imagename -- to remove the images
+docker rmi -f imagename -- to forcefully remove the images
+
+docker pull imagename:tagname --- downloads the specific image with tag
+docker rmi imagename:tagname
+
+
+docker run imagename -- to run a container from image
+docker run imagename:tagname -- specfic tag container
+
+docker ps -- process of running containers
+docker ps -a -- process of running and stopped containers
+docker rm containername/containerID
+
+docker system purne -a -f --- to delete all the unused containers and images
+
+docker search imagename --- to search particualr image
+
+docker installation dir -- /var/lib/docker
+
+
+Url :: https://hub.docker.com/
+       https://docs.docker.com/
+
+docker documentation
+yum install docker -y
+docker -v
+systemctl start docker
+systemctl status docker
+
+
+
+
+1  docker run ubuntu:18.04
+    2  docker ps
+    3  docker ps -a
+    4  docker system prune -a -
+    5  docker system prune -a -f
+    6  clear
+    7  docker run -it ubuntu:18.04 bash
+    8  docker ps
+    9  docker ps -a
+   10  ps -ef
+   11  ip-172-31-11-136 ~]#
+   12  [root@ip-172-31-11-136 ~]# docker ps -a
+   13  CONTAINER ID   IMAGE          COMMAND   CREATED          STATUS                       PORTS     NAMES
+   14  e4771890ba38   ubuntu:18.04   "bash"    57 seconds ago   Exited (130) 5 seconds ago             friendly_haslett
+   15  [root@ip-172-31-11-136 ~]#
+   16  docker ps -a
+   17  clear
+   18  docker ps -a
+   19  docker start e4771890ba38
+   20  docker ps
+   21  docker stop friendly_haslett
+   22  docker ps
+   23  docker ps -a
+   24  docker kill e4771890ba38
+   25  docker rm e4771890ba38
+   26  docker ps
+   27  docker ps -a
+   28  docker images
+   29  docker rmi ubuntu:18.04
+   30  clear
+   31  docker run -it ubuntu:18.04 bash
+   32  git --version
+   33  docker ps
+   34  docker ps -a
+   35  docker start 11bbd3e285f6
+   36  docker ps
+   37  docker attach 11bbd3e285f6
+   38  docker ps
+   39  docker ps -a
+   40  docker start focused_tesla
+   41  docker attach focused_tesla
+   42  docker sp
+   43  docker ps
+   44  docker attach 11bbd3e285f6
+   45  docker run -it ubuntu:18.04 whoami
+   46  whoami
+   47  docker ps -a
+   48  docker -it ubuntu:18.04 bash
+   49  docker run -it ubuntu:18.04 bash
+   50  docker ps
+   51  docker info
+   52  docker stats
+   53  docker ps
+   54  docker stats ea0c5810831d
+   55  docker ps
+   56  docker logs -f ea0c5810831d
+   57  docker inspect ea0c5810831d
+   58  cd /var/lib/docker/
+   59  ls -ltr
+   60  cd containers/
+   61  ls -tlr
+   62  pwd
+   63  cd
+   64  clear
+   65  docker ps
+   66  docker system prune -a -f
+   67  docker ps
+   68  docker ps -a
+   69  docker images
+   70  docker stop ea0c5810831d 11bbd3e285f6
+   71  docker system prune - a-d
+   72  docker system prune -a -f
+   73  docker ps
+   74  docker ps -a
+   75  docker images
+   76  clear
+   77  docker run -it ubuntu:18.04 bash
+   78  docker system prune -a -f
+   79  clear
+   80  docker run -itd ubuntu:18.04 bash
+   81  docker ps
+   82  docker ps
+   83  docker stop bc586dff8b1c
+   84  docker system prune -a -f
+   85  clear
+   86  ping localhost
+   87  clear
+   88  docker  run centos:8 ping localhost
+   89  docker ps -a
+   90  docker system prune -a -f
+   91  clear
+   92  docker run -d centos:8 ping localhost
+   93  docker ps
+   94  docker logs 273a8ce52be2
+   95  docker logs -f 273a8ce52be2
+   96  docker ps
+   97  docker attach 273a8ce52be2
+   98  docker ps
+   99  docker ps -a
+  100  docker system prune -a -f
+  101  docker run -d centos:8 ping localhost
+  102  docker ps
+  103  docker attach 44f554b66983
+  104  docker system prune -a -f
+  105  docker ps
+  106  docker run -d centos:8 ping localhost
+  107  docker ps
+  108  docker exec -it 2e090b8f4c5e bash
+  109  docker exec -it 2e090b8f4c5e whoami
+  110  docker ps
+  111  history
+  
+  
+docker run -it ubuntu:18.04 bash -- i=input -t=terminal bash -- shell terminal
+ctrl+d == exit from container and container stop
+ctrl+pq == exit from container and contaner running
+docker start containerid/containername
+docker stop containerid/containername
+docker rm containrid/contname
+docker kill containerid/containername
+
+docker attach containrid/containername --- attach to container command
+docker info --- shows docker install information
+docker logs -f containerid -- shows logs of container
+docker stats
+docker stats containid/containame --- shows memory,cpu etc details used by container
+docker inspect containid -- shows all details of container, with network, ip, gateway and etc config
+
+once you are in ubntu run
+apt-get update -y
+apt-get install git -y
+
+docker run -d centos:8 ping localhost --- -d=detach mode
+
+docker exec -it centos:8 bash --
+
+
+
+
+Docker reference git profile ::
+
+https://github.com/collabnix/dockerlabs/blob/master/workshop/docker/README.md
+
+
+
+
+
+
+What are Layers?
+Layers are a result of the way Docker images are built. Each step in a Dockerfile creates a new “layer” that’s essentially a diff of the filesystem changes since the last step. Metadata instructions such as LABEL and MAINTAINER do not create layers because they don’t affect the filesystem.
+
+This image ha
+
+
+https://www.howtogeek.com/devops/what-are-docker-image-layers/#:~:text=What%20are%20Layers%3F,don't%20affect%20the%20filesystem.
+
+Docker commands  ::
+1  yum install docker -y
+    2  systemctl start docker
+    3  clear
+    4  docker run -itd ubuntu:18.04 bash
+    5  docker ps
+    6  docker rename 70d0899a9c03 velocity
+    7  docker ps
+    8  docker stop 70d0899a9c03
+    9  clear
+   10  docker run -itd --name velocity ubuntu:18.04 bash
+   11  docker ps- a
+   12  docker ps -
+   13  docker ps -a
+   14  clear
+   15  docker run -itd --name test-velocity ubuntu:18.04 bash
+   16  docker ps
+   17  docker stop test-velocity
+   18  docker rm test-velocity velocity
+   19  docker ps -a
+   20  docker system prune -a -
+   21  docker system prune -a -f
+   22  clear
+   23  docker images
+   24  docker ps -a
+   25  clear
+   26  docker pull ubuntu:18.04
+   27  docker images
+   28  docker run -itd --name test ubuntu:18.04 bash
+   29  docker sp
+   30  docker ps
+   31  docker exec -it test bash
+   32  docker ps
+   33  docker images
+   34  docker commit test my-ubuntu:1.0
+   35  docker images
+   36  docker ps
+   37  docker stop test
+   38  docker rm test
+   39  docker rmi -f ubuntu:18.04
+   40  docker imges
+   41  docker images
+   42  docker ps -a
+   43  clear
+   44  docker images
+   45  docker run -itd --name test my-ubuntu:1.0 bash
+   46  docker ps
+   47  docker exec -it test bash
+   48  docker ps
+   49  docker stop test
+   50  docker rm test
+   51  docker images
+   52  docker push my-ubuntu:1.0
+   53  docker rename my-ubuntu:1.0 shantanu312/my-ubuntu:1.0
+   54  docker images
+   55  docker run -itd --name test my-ubuntu:1.0 bash
+   56  docker ps
+   57  docker commit test shantanu312/aws-ubuntu:1.0
+   58  docker images
+   59  docker push shantanu312/aws-ubuntu:1.0
+   60  docker login
+   61  docker push shantanu312/aws-ubuntu:1.0
+   62  docker images
+   63  docker push my-ubuntu:1.0
+   64  docker ps
+   65  docker stop test
+   66  docker rm test
+65  docker stop test
+   66  docker rm test
+   67  docker ps -a
+   68  docker system prune -a -f
+   69  docker images
+   70  docker ps -a
+   71  clear
+   72  docker run -itd --name test shantanu312/aws-ubuntu:1.0 bash
+   73  docker images
+   74  docker ps
+   75  docker attach test
+   76  docker ps
+   77  docker images
+   78  docker system prune -a -f
+   79  ls -ltr
+   80  clear
+   81  ls -ltr
+   82  docker run -itd httpd
+   83  docker ps
+   84  docker logs -f 648dc39b305a
+   85  docker ps
+   86  docker exec -it 648dc39b305a bash
+   87  docker ps
+   88  docker inspect 648dc39b305a
+   89  curl http://172.17.0.2:80
+   90  docker ps
+   91  docker exec -it 648dc39b305a bash
+   92  curl http://172.17.0.2:80
+   93  docker ps
+   94  docker stop 648dc39b305a
+   95  docker ps
+   96  docker images
+   97  docker run -itdp 80:80 --name test httpd
+   98  docker ps
+   99  docker run -itdp 8080:80 --name test httpd
+  100  docker run -itdp 8080:80 --name test-1 httpd
+  101  docker ps
+  102  docker run -itdp 90:80 --name test-2 httpd
+  103  docker ps
+  104  docker stats
+  105  ls -ltr
+  106  docker ps
+  107  vi index.html
+  108  ls -ltr
+  109  docker cp index.html 99eb900b115f:/usr/local/apache2/htdocs
+  110  docker cp index.html test-1:/usr/local/apache2/htdocs
+  111  docker cp index.html test:/usr/local/apache2/htdocs
+  112  rm rf index.html
+  113  ls -ltr
+  114  rm -rf index.html
+  115  clear
+  116  docker ps
+  117  docker cp test://usr/local/apache2/htdocs/index.html .
+  118  ls -ltr
+  119  cat index.html
+  120  history
+  
+  
+  docker rename containername/conid newcontname
+
+docker run -itd --name newname base-containnername
+eg - docker run -itd --name test ubuntu:18.04 bash
+
+docker commit contid/contiName new-imagename  -- to create own imagename
+
+docker login
+docker push dockerhubusername/imagename:tagname
+
+for push to work
+
+docker commit contid dockerhubusername/imagename:tagname
+
+for port bind use -p
+
+docker run -itdp 80:80 httpd
+
+docker cp filename contid:/path  -- you can use cont name as well
+
+docker cp contid:/path fodlername
+
+
+
+
+old version
+sudo curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-`uname -s`-`uname -m` | sudo tee /usr/local/bin/docker-compose > /dev/null
+sudo chmod +x /usr/local/bin/docker-compose
+ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+docker-compose --version
+
+
+https://docs.docker.com/compose/install/other/#install-compose-standalone
+
+
+NEW VERSION
+curl -SL https://github.com/docker/compose/releases/download/v2.11.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose 
+sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+sudo chmod +x /usr/bin/docker-compose
+
+
+LATEST LINK FOR TODAY
+https://github.com/docker/compose/releases/download/v2.12.2/docker-compose-linux-x86_64
+
+
+http://3.111.188.126:8080/sample/
+

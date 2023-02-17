@@ -1,0 +1,253 @@
+git fetch  -- it downloads the metadata not the actual data
+git diff origin/master  -- compares local repo change with rr change after we run git fetch command
+git pull -- it fetches the data/change from RR and then merges the change with the local repo
+git merge --abort --- to abort the merge this command is used
+
+1  git config --global user.name shantanu
+    2  git config --global user.email shantanumahajan6@gmail.com
+    3  cd /mnt
+    4  mkdir vel-app
+    5  cd vel-app/
+    6  git init
+    7  ls -ltra
+    8  vi index.html
+    9  git add index.html
+   10  git commit -m "added 1st commit"
+   11  git log
+   12  git commit --amend -m "test comment " bf7aa93
+   13  git commit --amend -m "test comment"
+   14  git log
+   15  git commit --amend --author 'velocity <velocity@pune.com>'
+   16  git log
+   17  git commit --amend --author 'shantanu <shantanumahajan6@gmail.com>
+   18  git commit --amend --author 'shantanu <shantanumahajan6@gmail.com>'
+   19  git log
+   20  vi dev.html
+   21  git status
+   22  git add dev.html
+   23  git commit -m "updated new file"
+   24  git remote add origin https://github.com/Shantanumajan6/vel-app.git
+   25  git remote -v
+   26  git push origin master
+   27  mkdir aws velocity
+   28  ls -ltr
+   29  git status
+   30  cd velocity/
+   31  ls -ltra
+   32  cd ../
+   33  cd aws/
+   34  ls -ltra
+   35  cd ../
+   36  ls -ltr
+   37  git status
+   38  cd velocity/
+   39  touch 1 2 3
+   40  cd ../
+   41  git status
+   42  git add velocity/=
+   43  git add velocity
+   44  git commit -m "added few files in velocity folder"
+   45  git push origin master
+   46  ls -ltr
+   47  cd aws/
+   48  touch .gitignore
+   49  ls -ltra
+   50  cd ../
+   51  git status
+   52  git add aws
+   53  git commit -m "added a .gitignore file in aws folder"
+   54  git push origin master
+   55  clear
+   56  ls -ltr
+   57  touch dev.css qa.css uat.css dev.xml qa.xml uat.xml dev.yaml qa.yaml uat.yaml
+   58  ls -ltr
+   59  git status
+   60  vi .gitignore
+   61  git status
+   62  cat .git
+   63  cat .gitignore
+   64  git add *
+   65  git status
+   66  git restore --staged *
+   67  git status
+   68  clear
+   69  ls -ltr
+   70  vi .gitignore
+   71  git status
+   72  cd ../
+   73  ls -lrt
+   74  rm -rf vel-app/
+   75  ls -ltr
+   76  clear
+   77  ls -ltr
+   78  git clone Nov 30 04:07 vel-app
+   79  [root@ip-172-31-43-204 mnt]# rm -rf vel-app/
+   80  [root@ip-172-31-43-204 mnt]# ls -ltr
+   81  total 0
+   82  clear
+   83  git clone https://github.com/Shantanumajan6/vel-app.git
+   84  ls -ltr
+   85  cd vel-app/
+   86  ls -ltr
+   87  cd ../
+   88  rm -rf vel-app/
+   89  clear
+   90  ls -ltr
+   91  git clone https://github.com/Shantanumajan6/vel-app.git
+   92  ls -ltr
+   93  cd vel-app/
+   94  ls -ltr
+   95  git log
+   96  git remote -v
+   97  git push origin master
+   98  cd ../
+   99  rm -rf vel-app/
+  100  ls -ltr
+  101  mkdir velocity-app
+  102  cd velocity-app/
+  103  vi index.html
+  104  git init
+  105  git add index.html
+  106  git commit -m "added 1st commit"
+  107  git log
+  108  git remote add origin https://github.com/Shantanumajan6/velocity-app.git
+  109  git push origin master
+  110  vi dev.html
+  111  git add dev.html
+  112  git commit -m "added dev file"
+  113  git push origin master
+  114  ls -ltr
+  115  vi dev.html
+  116  git add dev.html
+  117  git commit -m "commit from dev1"
+  118  git push origin master
+  119  git pull origin master
+  120  git log
+  121  ls -ltr
+  122  vi dev.html
+  123  git add dev.html
+  124  git commit -m "updated dev file"
+  125  git log
+  126  git push origin master
+  127  git pull
+  128  git pull origin master
+  129  git config pull.ff true
+  130  git pull origin master
+  131  git log -3
+  132  git push origin master
+  133  ls -ltr
+  134  git log --oneline
+  135  ls -ltr
+  136  vi dev.html
+  137  git add dev.html
+  138  git commit -m "added commit in dev file from shantanu"
+  139  git push origin master
+  140  git pull origin master
+  141  git log --oneline
+  142  git push origin master
+  
+  
+  
+  
+  1  yum install git -y
+    2  git config --global user.name mahesh
+    3  git config --global user.email mahesh@vctc.com
+    4  cd /mnt
+    5  git clone https://github.com/Shantanumajan6/velocity-app.git
+    6  ls -ltr
+    7  cd velocity-app/
+    8  ls -tlr
+    9  git log
+   10  ls -ltr
+   11  git pull
+   12  ls -ltr
+   13  cat dev.html
+   14  git log
+   15  vi index.html
+   16  git add index.html
+   17  git commit -m "addded inddex file"
+   18  git push origin master
+   19  ls -ltr
+   20  vi index.html
+   21  git status
+   22  git add index.html
+   23  git commit -m "updated for a new change"
+   24  git push origin master
+   25  git log
+   26  ls -ltr
+   27  vi index.html
+   28  git status
+   29  git restore index.html
+   30  git status
+   31  git pull
+   32  git log
+   33  ls -ltr
+   34  vi dev.html
+   35  vi index.html
+   36  git add index.html
+   37  git commit -m "added index.html from mahesh"
+   38  git push origin master
+   39  git log --oneline
+   40  git pull
+   41  git log --oneline
+   42  history
+   43  1  git config --global user.name shantanu
+   44      2  git config --global user.email shantanumahajan6@gmail.com
+   45      3  cd /mnt
+   46      4  mkdir vel-app
+   47      5  cd vel-app/
+   48      6  git init
+   49      7  ls -ltra
+   50      8  vi index.html
+   51      9  git add index.html
+   52     10  git commit -m "added 1st commit"
+   53     11  git log
+   54     12  git commit --amend -m "test comment " bf7aa93
+   55     13  git commit --amend -m "test comment"
+   56     14  git log
+   57     15  git commit --amend --author 'velocity <velocity@pune.com>'
+   58     16  git log
+   59     17  git commit --amend --author 'shantanu <shantanumahajan6@gmail.com>
+   18  git commit --amend --author 'shantanu <shantanumahajan6@gmail.com>'
+   19  git log
+   20  vi dev.html
+   21  git status
+   22  git add dev.html
+   23  git commit -m "updated new file"
+   24  git remote add origin https://github.com/Shantanumajan6/vel-app.git
+   25  git remote -v
+   26  git push origin master
+   27  mkdir aws velocity
+   28  ls -ltr
+   29  git status
+   30  cd velocity/
+   31  ls -ltra
+   32  cd ../
+   33  cd aws/
+   34  ls -ltra
+   35  cd ../
+   36  ls -ltr
+   37  git status
+   38  cd velocity/
+   39  touch 1 2 3
+   40  cd ../
+   41  git status
+   42  git add velocity/=
+   43  git add velocity
+   60  clear
+   
+   
+   git commit --amend -m "new message" -- to change message for latest commit
+git commit --amend --author "authorname <authoremail>" -- to change author of latest commit
+
+.gitignore --
+*.css
+*.xml
+
+git config pull.ff true --- to allow pull forcefully in case of conflict
+
+git fetch  -- it downloads the metadata not the actual data
+git diff origin/master  -- compares local repo change with rr change after we run git fetch command
+git pull -- it fetches the data/change from RR and then merges the change with the local repo
+git merge --abort --- to abort the merge this command is used
+  
